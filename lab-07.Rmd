@@ -24,7 +24,13 @@ evals<-read.csv("data/evals.csv", row.names=1)
 1.  Visualize the distribution of `score` in the dataframe `evals`.
 
 ```{r viz-score}
-# add code here
+
+ggplot(evals, 
+       mapping = aes(x = score, 
+                     fill = score)) + 
+  geom_histogram(bins = 30) 
+
+
 ```
 
 *Add your other details and narratives here.*
